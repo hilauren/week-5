@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>第五周作業</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="/scss/all.css">
+</head>
+<body>
+
+
+<!-- model start -->
+<!-- add new admin model -->
+<div class="modal fade" id="add-btn-model-center" tabindex="-1" role="dialog" aria-labelledby="add-btn-model" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content p-5">
+        <!-- header   -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="add-btn-model">Add New Admin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- body -->
+        <div class="modal-body">
+            <div class="body-section">
+                <!-- Account -->
+                <form action="#">
+                    <div class="body-title">Account</div>
+                    <div class="mb-2">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="w-100" placeholder="Emir Wicks">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="w-100" placeholder="emir.wicks@mail.com">
+                    </div>
+                    <hr>
+                    <!-- Verification -->
+                    <div class="body-section">
+                        <div class="body-title">Verification</div>
+                        <div class="verified justify-content-between d-flex">
+                            <p><span class="material-icons text-warning verified-warning">report_problem</span>
+                                <span class="material-icons text-primary verified-pass">check_circle</span>
+                            Verified</p>
+                            <p>2020/4/12</p>
+                        </div>
+                        <div class="btn btn-outline-modal w-100">Send Verification Mail</div>
+                    </div>
+                    <hr>
+                    <!-- Access Level -->
+                    <div class="body-section">
+                        <div class="body-title">Access Level</div>
+                        <button class="dropdown-btn-outline dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            -Choose access level-<span class="material-icons">arrow_drop_down</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                            <a class="dropdown-item" href="#">Level 1</a>
+                            <a class="dropdown-item" href="#">Level 2</a>    
+                            <a class="dropdown-item" href="#">Level 3</a>    
+                            <a class="dropdown-item" href="#">Level 4</a>    
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Custom Access -->
+                    <div class="body-section">
+                        <div class="body-title">Custom Access</div>
+                        <div class="mb-2 checkbox">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="lecture" name="lecture" class="mr-2">
+                                <label for="lecture">lecture</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Coupon" name="Coupon" class="mr-2">
+                                <label for="Coupon">Coupon</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Message" name="Message" class="mr-2">
+                                <label for="Message">Message</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Setting" name="Setting" class="mr-2">
+                                <label for="Setting">Setting</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="task menu" name="task menu" class="mr-2">
+                                <label for="task menu">task menu</label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn" data-dismiss="modal">Update</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- edit admin model -->
+<div class="modal fade" id="editadmin" tabindex="-1" role="dialog" aria-labelledby="editadmin1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content p-5">
+        <!-- header   -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="editadmin1">Edit Admin</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!-- body -->
+        <div class="modal-body">
+            <div class="body-section">
+                <!-- Account -->
+                <form action="#">
+                    <div class="body-title">Account</div>
+                    <div class="mb-2">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" class="w-100" placeholder="Emir Wicks">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="w-100" placeholder="emir.wicks@mail.com">
+                    </div>
+                    <hr>
+                    <!-- Verification -->
+                    <div class="body-section">
+                        <div class="body-title">Verification</div>
+                        <div class="verified justify-content-between d-flex">
+                            <p><span class="material-icons text-warning verified-warning">report_problem</span>
+                                <span class="material-icons text-primary verified-pass">check_circle</span>
+                            Verified</p>
+                            <p>2020/4/12</p>
+                        </div>
+                        <div class="btn btn-outline-modal w-100">Send Verification Mail</div>
+                    </div>
+                    <hr>
+                    <!-- Access Level -->
+                    <div class="body-section">
+                        <div class="body-title">Access Level</div>
+                        <button class="dropdown-btn-outline dropdown-toggle" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            -Choose access level-<span class="material-icons">arrow_drop_down</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                            <a class="dropdown-item" href="#">Level 1</a>
+                            <a class="dropdown-item" href="#">Level 2</a>    
+                            <a class="dropdown-item" href="#">Level 3</a>    
+                            <a class="dropdown-item" href="#">Level 4</a>    
+                        </div>
+                    </div>
+                    <!-- Custom Access -->
+                    <div class="body-section">
+                        <div class="body-title">Custom Access</div>
+                        <div class="mb-2 checkbox">
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="lecture" name="lecture" class="mr-2">
+                                <label for="lecture">lecture</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Coupon" name="Coupon" class="mr-2">
+                                <label for="Coupon">Coupon</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Message" name="Message" class="mr-2">
+                                <label for="Message">Message</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="Setting" name="Setting" class="mr-2">
+                                <label for="Setting">Setting</label>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <input type="checkbox" id="task menu" name="task menu" class="mr-2">
+                                <label for="task menu">task menu</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="body-section">
+                        <div class="body-title">Deactivate Account</div>
+                        <div class="verified d-flex">
+                            <p><span class="material-icons text-warning verified-warning">report_problem</span>
+                                <span class="material-icons text-primary verified-pass">check_circle</span></p>
+                            <p class="font-weight-bold text-warning">This cannot be undone!</p>
+                        </div>
+                        <div class="btn btn-outline-modal w-100">Deactivate This Account</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn" data-dismiss="modal">Update</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- admin's model -->
+<div class="modal fade admin-info" id="adminsModel" tabindex="-1" role="dialog" aria-labelledby="adminsModelTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close admin-close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="admin-card d-flex p-5">
+                <div class="admin-img mr-4"></div>
+                <div class="model-content w-100">
+                    <p>#1</p>
+                    <p>Admin</p>
+                    <p>Emir Wicks</p>
+                    <p>emir.wicks@mail.com</p>
+                    <div class="dropdown mt-3 w-100">
+                        <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">                    
+                            <div class="d-flex justify-content-between">
+                                <div class="tag w-100">verified</div>
+                                <div class="material-icons">keyboard_arrow_down</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="collapse mt-4" id="collapseExample">
+                        <div class="btn btn-outline-w mr-3 deactivate" data-toggle="modal" data-target="#editadmin">Deactivate</div>
+                        <div class="btn deactivate" data-toggle="modal" data-target="#editadmin">Edit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+<!-- modal end -->
+
+
+
+
+
+
+
+<div class="home-page warp">
+    <!-- sidebar start -->
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <h1 class="ml-5 mt-5 mb-5">
+                <a href="#">ANSWER</a>
+            </h1>
+            <ul>
+                <li><span class="material-icons ml-5 mr-3">assessment</span>Dashboard</li>
+                <li><span class="material-icons ml-5 mr-3">question_answer</span>Question</li>
+                <li class="assignment"><span class="material-icons ml-5 mr-3">assignment</span>Assignment</a></li>
+                <li><span class="material-icons ml-5 mr-3">video_library</span>Course</li>
+                <li class="admin"><span class="material-icons ml-5 mr-3">people_alt</span>Admin</li>
+                <li><span class="material-icons ml-5 mr-3">settings</span>Settings</li>
+            </ul>
+        </div>
+        <!-- member information -->
+        <div class="member user-info d-flex">
+            <div class="user-pic main-user mr-3 ml-5"></div>
+            <div class="username">
+            <p>Andy Chen</p>
+            <p class="text-gray">andy0401@mail.com</p>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- Assignment start-->
+    <div class="main assignment-main">
+        <div class="header p-5">
+            <h2>Assignment</h2>
+            <div>
+                <button class="dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All Courses<span class="material-icons text-primary">keyboard_arrow_down</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">HTML&CSS</a>
+                    <a class="dropdown-item" href="#">JS</a>
+                    <a class="dropdown-item" href="#">jQuery</a>
+                </div>
+            </div>
+            <div class="form-group d-flex">
+                <a href="#"><div class="material-icon mr-4"><span class="material-icons">search</span></div></a>
+                <a href="#"><div class="material-icon"><span class="material-icons">notifications_active</span></div></a>
+            </div>
+        </div>
+        <div class="dropdown ml-5 mr-5">
+            <div>
+                <button class="dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    All (4)<span class="material-icons text-primary">keyboard_arrow_down</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                    <a class="dropdown-item" href="#">Please check this file…</a>
+                    <a class="dropdown-item" href="#">My Homework</a>
+                    <a class="dropdown-item" href="#">Have a problem with this…</a>
+                    <a class="dropdown-item" href="#">Did I do it right?</a>
+                </div>
+            </div>
+            <p>2 comments</p>
+        </div>
+        <!-- select block start-->
+        <div class="chapter d-flex pl-5">
+            <div class="chapter-list mr-3">
+                <!-- block 1 -->
+                <a href="#">
+                    <div class="list-group d-flex chapter-header bg-secondary bd-b">
+                        <div>
+                            <p class="list-chapter">Chapter Assignment 2</p>
+                            <p class="list-title">Please check this file…</p>
+                        </div>
+                        <div>
+                            <p class="list-time">4 hrs ago</p>
+                            <p class="list-name">Emily Wang</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- block 2 -->
+                <a href="#">
+                    <div class="list-group d-flex chapter-header bd-b">
+                        <div>
+                            <p class="list-chapter">Chapter Assignment 1</p>
+                            <p class="list-title">My Homework</p>
+                        </div>
+                        <div>
+                            <p class="list-time">12 hrs ago</p>
+                            <p class="list-name">David Xu</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- block 3 -->
+                <a href="#">
+                    <div class="list-group d-flex chapter-header bd-b">
+                        <div>
+                            <p class="list-chapter">Final Assignment</p>
+                            <p class="list-title">Have a problem with this…</p>
+                        </div>
+                        <div>
+                            <p class="list-time">18 hrs ago</p>
+                            <p class="list-name">Tony Wei</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- block 4 -->
+                <a href="#">
+                    <div class="list-group d-flex chapter-header">
+                        <div>
+                            <p class="list-chapter">Final Assignment</p>
+                            <p class="list-title">Did I do it right?</p>
+                        </div>
+                        <div>
+                            <p class="list-time">19 hrs ago</p>
+                            <p class="list-name">Christina Lin</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- select block end-->
+            <!-- block's information start-->
+            <div class="chapter-comment mr-5">
+                <div class="chapter-header bg-secondary bd-b">
+                    <p class="list-chapter">Chapter Assignment 2 / HTML&CSS</p>
+                    <p class="list-title">Please check this file for me, thanks!</p>
+                </div>
+                <div class="chapter-content">
+                    <!-- question -->
+                    <div class="user-comment pt-3">
+                        <div class="form-group d-flex mr-5">
+                            <a href="#"><span class="material-icons">more_vert</span></a>
+                        </div>
+                        <div class="user-info d-flex">
+                            <div class="user-pic mr-2"></div>
+                            <div class="username">
+                                <p>Emily Wang</p>
+                                <p class="text-gray">10:38 AM (4 hours ago)</p>
+                            </div>
+                        </div>
+                        <div class="comment-txt ml-6 mt-3">
+                            <p>Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <strong>div</strong> is bigger than the height of the <strong>img</strong> ? There is a gap below the image, but it doesn’t seems to be a padding/margin. What is the gap or extra space below image?</p>
+                            <div class="btn-file-download mt-3">
+                                <a download href="file"><span class="material-icons mr-2">attach_file</span>HW-2-David.zip</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- answer -->
+                    <div class="user-comment answered pt-3">
+                        <div class="form-group d-flex">
+                            <a href="#">
+                                <div class="material-icon mr-4"><span class="material-icons">
+                                    star_border
+                                    </span>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="material-icon mr-5"><span class="material-icons">
+                                edit
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="user-info d-flex">
+                            <div class="user-pic mr-2"></div>
+                            <div class="username">
+                                <p>Andy Chen (You)</p>
+                                <p class="text-gray">13:24 AM (1 hours ago)</p>
+                            </div>
+                        </div>
+                        <div class="comment-txt ml-6 mt-3">
+                            <p>Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.</p>
+                            <p><br>You can:</p>
+                            <p><br></p>
+                            <ul>
+                                <li>• adjust the <strong>vertical-align</strong> of the image to position it elsewhere (e.g. the <strong>middle</strong> ) or</li>
+                                <li>• change the <strong>display</strong> so it isn’t inline.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- replying answer  -->
+                    <div class="user-comment message-board pt-3">                      
+                        <!-- message board icons -->
+                        <ul class="form-group d-flex">
+                            <li>
+                                <button class="dropdown-btn dropdown-toggle" type="button" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Body Text<span class="material-icons">arrow_drop_down</span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                                    <a class="dropdown-item" href="#">Heading 1</a>
+                                    <a class="dropdown-item" href="#">Heading 2</a>
+                                    <a class="dropdown-item" href="#">Heading 3</a>
+                                    <a class="dropdown-item" href="#">Heading 4</a>
+                                    <a class="dropdown-item" href="#">Heading 5</a>
+                                    <a class="dropdown-item" href="#">Heading 6</a>
+                                    <a class="dropdown-item" href="#">Text</a>                                
+                                </div>
+                            </li>
+                            <li><a href="#"><span class="material-icons">format_bold</span></a></li>
+                            <li><a href="#"><span class="material-icons">format_italic</span></a></li>
+                            <li><a href="#"><span class="material-icons">format_list_bulleted</span></a></li>
+                            <li><a href="#"><span class="material-icons">format_list_numbered</span></a></li>
+                            <li><a href="#"><span class="material-icons">insert_photo</span></a></li>
+                            <li><a href="#"><span class="material-icons">insert_link</span></a></li>
+                            <li><a href="#"><span class="material-icons">code</span></a></li>
+                        </ul>
+                        <!-- message board area -->
+                        <textarea>Reply an answer…</textarea>
+                        
+                        <!-- btn -->
+                        <div class="form-group cancel mt-3">
+                            <div class="btn btn-outline mr-3">Cancel</div>
+                            <div class="btn">Reply</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- answer btn -->
+                <div class="footer">
+                    <div class="form-group mt-4">
+                        <div class="material-icon">
+                            <a href="#"><span class="material-icons">keyboard_arrow_left</span></a>
+                            <a href="#"><span class="material-icons">keyboard_arrow_right</span></a>
+                        </div>
+                    </div>
+                    <div class="form-group d-flex mt-3">
+                        <div class="btn btn-outline mr-3">Mark as read</div>
+                        <div class="btn reply">Reply</div>
+                    </div>
+                </div>
+            </div>
+            <!-- block's information end-->
+        </div>
+    </div>
+    <!-- Assignment end-->
+
+    <!-- Admin start-->
+    <div class="main admin-main pr-5 pl-5 pb-5">
+        <div class="header pt-5 pb-5">
+            <h2>Admin</h2>
+            <div class="add-btn" data-toggle="modal" data-target="#add-btn-model-center">
+                <span class="material-icons text-primary">add</span>Add New Admin
+            </div>
+            <div class="form-group d-flex">
+                <a href="#"><div class="material-icon mr-4"><span class="material-icons">search</span></div></a>
+                <a href="#"><div class="material-icon"><span class="material-icons">notifications_active</span></div></a>
+            </div>
+        </div>
+        <table class="table w-100">
+            <thead>
+                <tr>
+                    <th scope="col">ID<span class="material-icons text-primary">
+                        arrow_downward
+                        </span></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Verified</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-toggle="modal" data-target="#adminsModel">
+                    <th scope="row"> #1</th>
+                    <td>Emir Wicks</td>
+                    <td>emir.wicks@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #2</th>
+                    <td>Zaina Goldsmith</td>
+                    <td>zaina.goldsmith@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                   <th scope="row"> #3</th>
+                    <td>Mahima Lopez</td>
+                    <td>Mahima.Lopez@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #4</th>
+                    <td>Pharrell Murray</td>
+                    <td>Pharrell.Murray@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #5</th>
+                    <td>Annika Mcbride</td>
+                    <td>Annika.Mcbride@mail.com</td>
+                    <td>Yes</th>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #6</th>
+                    <td>Fatimah Clark</td>
+                    <td>Fatimah.Clark@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #7</th>
+                    <td>Klaudia Rhodes</td>
+                    <td>Klaudia.Rhodes@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #8</th>
+                    <td>Tillie Lucero</td>
+                    <td>Tillie.Lucero@mail.com</td>
+                    <td>Yes</td>
+                    <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"> #9</th>
+                    <td>Sabrina Stephenson</td>
+                    <td>Sabrina.Stephenson@mail.com</td>
+                    <td>Yes</th>
+                                            <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">#10</th>
+                    <td>Annie Smith</td>
+                    <td>Annie.Smith@mail.com</td>
+                    <td>Yes</td>
+                                        <td>
+                        <span class="material-icons mr-3">visibility</span>
+                        <span class="material-icons">create</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="page-area">
+            <a href="#"><div class="page-list"><span class="material-icons">keyboard_arrow_left</span></div></a>
+            <a href="#"><div class="page-list">1</div></a>
+            <a href="#"><div class="page-list">2</div></a>
+            <a href="#"><div class="page-list">3</div></a>
+            <a href="#"><div class="page-list"><span class="material-icons">keyboard_arrow_right</span></div></a>
+        </div>
+    </div>
+    <!-- Admin end-->
+</div>
+
+
+
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- my js -->
+    <script src="/js/all.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+//btn
+
+// download button
+.btn-file-download{
+    background-color: $secondary;
+    display: inline-block;
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+    padding: 10px 16px 10px 16px;
+    border-radius: 2px;
+}
+
+
+// btn
+.btn{
+    padding: 8px 32px 8px 32px;
+    background-color: $primary;
+    color: $white;
+    font-size: $font-size-m;
+    font-weight: $font-weight-bold;
+}
+
+.btn:hover{
+    background-color: $success;
+    color: $primary;
+}
+
+// outline btn
+// need to use with .btn
+.btn-outline{
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+}
+
+
+.btn-outline:hover{
+    background-color: $secondary;
+    color: $primary;
+}
+
+
+.btn-outline-W{
+    background-color: $white;
+    border: 1px solid $warning;
+    color: $warning;
+}
+
+.btn-outline-W:hover{
+    background-color: $white;
+    color: $warning;
+}
+
+// outline btn with modal
+// need to use with .btn
+.btn-outline-modal{
+    background-color: $white;
+    border: 1px solid $success;
+    color: $primary;
+}
+
+.btn-outline-modal:hover{
+    background-color: $white;
+}
+.btn-outline-modal:active, .btn-outline-modal.active{
+    color: $success;
+    border: 1px solid $success;
+    background-color: $white;
+
+}
+
+
+//dropdown button
+
+.dropdown-btn{
+    font-weight: $font-weight-bold;
+    border: 0 solid $white;
+    background-color: $white;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+//dropdown button outline
+
+
+.dropdown-btn-outline{
+    border: 1px solid $black;
+    background-color: $white;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-spacing: 2px;
+    width: 100%;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+//modal add btn
+.add-btn{
+    font-weight: $font-weight-bold;
+}
+
+
+// ----------------------
+
+//model
+
+.modal-title{
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+}
+
+
+.modal-content{
+    p:nth-child(1),p:nth-child(2){
+        font-size: $font-size-m;
+    }
+    p:nth-child(3){
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+    }
+
+    p:nth-child(4){
+        color: $gray-700;
+    }
+    
+    .dropdown{
+        .tag{
+            background-color: $secondary;
+            padding: 4px 8px 4px 8px;
+        }
+
+        span{
+            right: 0;
+        }
+    }   
+}
+
+.admin-close{
+    display: inline;
+    position: absolute;
+    right: 32px;
+    top: 24px;
+}
+
+
+//page area
+
+
+.page-area{
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.page-list{
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    font-size: $font-size-m; 
+    color: $black;
+    border: 1px solid $primary;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 63px;
+    // border-radius: 2px;
+}
+
+.page-list span{
+    color: $primary;
+}
+
+.page-list:hover, .page-list span:hover{
+    color: $white;
+    background-color: $primary;
+}

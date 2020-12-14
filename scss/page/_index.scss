@@ -1,0 +1,152 @@
+
+.wrap{
+    display: flex;
+    position: relative;
+}
+
+.main{
+    // 置右設定
+    position: absolute;
+    right: 0;
+    width: calc(100% - 300px);
+   
+    //先隱藏
+    // visibility: hidden;
+}
+
+
+.header{
+    max-width: 100%;
+    display: flex;
+
+    h2{
+        margin-right: 46px;
+        font-weight: $font-weight-bold;
+    }
+}
+
+.form-group{
+    right: 32px;
+    position: absolute;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    p{
+        color: $gray-700;
+        font-size: $font-size-s;
+    }
+}
+
+.chapter{
+    .chapter-list{
+        width: 320px;
+    }
+}
+
+.chapter-list{
+    display: inline-table;
+    border: 1px solid $success;
+    border-radius: 2px;
+}
+
+.list-group{
+    font-size: $font-size-s; 
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div:nth-child(2){
+        text-align: right;
+        right: 0;
+    }
+
+    .list-name{
+        color: $gray-700;
+    }
+}
+
+.list-chapter, .list-time, .list-name{
+    font-size: $font-size-s;
+    color: #000;
+}
+
+.list-title{
+    font-weight: $font-weight-bold;
+    font-size: $font-size-m;
+}
+
+
+.chapter-comment{
+    width: calc(100% - 320px);
+    font-size: $font-size-base;
+    border: 1px solid $success;
+    border-radius: 2px;
+}
+
+.chapter-header{
+    padding: 12px;
+}
+
+.bd-b{
+    border-bottom: 1px solid $success;
+}
+
+.user-pic{
+    background-image: url(/img/andychen.jpeg);
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+}
+
+.user-comment{
+    border-bottom: 1px solid $secondary;
+    padding: 0 16px 16px 16px;
+}
+
+
+.message-board{
+    padding: 0;
+    //先隱藏
+    display: none;
+    .form-group:nth-child(1){
+        right: 0;
+        left: 0;
+        border-bottom: 1px solid $secondary;
+        border-top: 1px solid $secondary;
+        padding: 16px;
+        max-width: 100%;
+        position: relative;
+        background-color: $secondary;
+
+        .dropdown-btn{
+            background-color: $secondary;
+        }
+    }
+}
+
+textarea{
+    border: 1px solid $white;
+    width: 100%;
+    height: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.user-comment li{
+    margin-right: 24px;
+}
+
+.comment-txt ul{
+    text-indent: 20px; 
+    
+    strong{
+        text-indent: 0px; 
+    }
+} 
+       

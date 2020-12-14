@@ -1,0 +1,83 @@
+
+.body-title{
+    font-weight: $font-weight-bold;
+    font-size: $font-size-l;
+}
+
+
+
+.body-section form{
+    display: flex;
+    flex-direction: column;
+    
+    label{
+        display: block;
+    }
+
+    input{
+    font-size: $font-size-m;
+    color: $black;
+    border-bottom: 1px solid $white;
+    background-color: $secondary;
+    padding: $spacing-3;
+    display: block;
+    }
+}
+
+
+.verified{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    color: $warning;
+
+    p:nth-child(1){
+        font-weight: $font-weight-bold;
+        font-size: $font-size-m;
+    }
+    p:nth-child(2){
+        color: $black;
+    }
+}
+
+
+.check{
+    color: $gray-300;
+}
+
+.verified-pass{
+    display: none;
+}
+
+tbody{
+    th{
+        font-weight: $font-weight-normal;
+    }
+
+    tr:hover{
+        background-color: $secondary;
+        cursor: pointer;
+    }
+}
+
+
+.admin-card{
+    .admin-img{
+        width: 227px;
+        height: 141px;
+        background-image: url(/img/emir.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.checkbox div{
+    vertical-align: middle;
+
+    label{
+        font-size: $font-size-m;
+    }
+}
+
+.admin-main{
+    visibility: hidden;
+}
